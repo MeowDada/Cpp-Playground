@@ -9,8 +9,14 @@ std::vector<int> vec_1;
 template<typename T>
 void foo(T source)
 {
+    /* copy source element by initilization */
     std::vector<int> vec_2{std::begin(source), std::end(source)};
+
+    /* copy source element by std::copy */
     std::copy(std::begin(source), std::end(source), std::begin(vec_0));
+
+    /* copy source element by std::copy */
+    /* back_inserter will return the position of the last iterator of the vec_1 */
     std::copy(std::begin(source), std::end(source), std::back_inserter(vec_1));
 
     auto print = [](const int& n) { std::cout << " " << n; };

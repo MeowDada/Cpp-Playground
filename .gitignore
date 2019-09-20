@@ -1,0 +1,12 @@
+# ignore VSCode workspace
+*.code-workspace
+
+# ignore all executable files
+./C++98/*.exe
+./C++11/*.exe
+./C++14/*.exe
+
+# ignore all object files
+./C++98/*.o
+./C++11/*.o
+./C++14/*.o

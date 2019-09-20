@@ -24,12 +24,12 @@ int main()
     }
 
     /* foo = { 0, 1, 2 } */
-    std::cout << "foo:";
+    std::cout << "foo: ";
     std::for_each(foo.begin(), foo.end(), print);
     std::cout << std::endl;
 
     /* bar = { 0, 10, 20 } */
-    std::cout << "bar:";
+    std::cout << "bar: ";
     std::for_each(bar.begin(), bar.end(), print);
     std::cout << std::endl;
 

@@ -18,7 +18,7 @@ void foo(T source)
     std::for_each(source.begin(), source.end(), print);
 }
 
-void main()
+int main()
 {
     std::vector<int> src{5,3,1,7,6};
     foo(src);
@@ -26,5 +26,7 @@ void main()
     auto print = [](const int& n) { std::cout << " " << n; };
 
     std::for_each(vec_0.begin(), vec_0.end(), print);
-    std::for_each(vec_1.begin(), vec_1.end(), print);    
+    std::for_each(vec_1.begin(), vec_1.end(), print);
+
+    return 0;    
 }

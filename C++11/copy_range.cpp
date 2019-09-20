@@ -16,6 +16,7 @@ void foo(T source)
     auto print = [](const int& n) { std::cout << " " << n; };
 
     std::for_each(source.begin(), source.end(), print);
+    std::cout << std::endl;
 }
 
 int main()
@@ -26,7 +27,9 @@ int main()
     auto print = [](const int& n) { std::cout << " " << n; };
 
     std::for_each(vec_0.begin(), vec_0.end(), print);
+    std::cout << std::endl;
     std::for_each(vec_1.begin(), vec_1.end(), print);
+    std::cout << std::endl;
 
     return 0;    
 }

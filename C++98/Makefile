@@ -6,11 +6,17 @@ CPPFLAGS         := -Wall -g -std=c++98
 INSERTER_PROG    := inserter
 INSERTER_SRCS    := inserter.cpp
 
-all: build_inserter
+SWAP_CONTAINER_PROG := swap_container
+SWAP_CONTAINER_SRCS := swap_container.cpp
+
+all: build_inserter build_swap_container
 
 build_inserter:
 	$(CC) $(CPPFLAGS) -o $(INSERTER_PROG) $(INSERTER_SRCS)
 
+build_swap_container:
+	$(CC) $(CPPFLAGS) -o $(SWAP_CONTAINER_PROG) $(SWAP_CONTAINER_SRCS)
+
 clean:
 	rm -rf *.o
-	rm -rf $(INSERTER_PROG)
+	rm -rf $(INSERTER_PROG) $(SWAP_CONTAINER_PROG)

@@ -30,7 +30,7 @@ int main()
 
 
     std::cout << "swap_range(v1.begin(), v1.end(), v2.begin())\n";
-    std::swap_ranges(std::begin(v1), std::end(v1), std::begin(v2));
+    std::swap_ranges(v1.begin(), v1.end(), v2.begin());
     std::cout << "v1: ";
     std::for_each(v1.begin(), v1.end(), print_int);
     std::cout << std::endl;

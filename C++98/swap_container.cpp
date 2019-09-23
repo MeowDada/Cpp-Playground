@@ -28,8 +28,7 @@ int main()
     std::for_each(v2.begin(), v2.end(), print_int);
     std::cout << std::endl;
 
-
-    std::cout << "swap_range(v1.begin(), v1.end(), v2.begin())\n";
+    std::cout << "std::swap_range(v1.begin(), v1.end(), v2.begin())\n";
     std::swap_ranges(v1.begin(), v1.end(), v2.begin());
     std::cout << "v1: ";
     std::for_each(v1.begin(), v1.end(), print_int);
@@ -41,7 +40,7 @@ int main()
     std::for_each(v1.begin(), v1.end(), print_int);
     std::cout << std::endl;
 
-    std::cout << "swap(v1, v2)\n";
+    std::cout << "std::swap(v1, v2)\n";
     std::swap(v1, v2);
     std::cout << "v1: ";
     std::for_each(v1.begin(), v1.end(), print_int);

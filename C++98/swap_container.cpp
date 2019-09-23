@@ -10,8 +10,15 @@ void print_int(const int &v)
 
 int main()
 {
+    /* C++98 vector must initialize by constructor
     std::vector<int> v1 = { 1, 3, 5, 7 };
     std::vector<int> v2 = { 2, 4, 6, 8 };
+    */
+
+   int tmp_v1[] = { 1, 3, 5, 7 };
+   int tmp_v2[] = { 2, 4, 6, 8 };
+   std::vector<int> v1(tmp_v1, tmp_v1+4);
+   std::vector<int> v2(tmp_v2, tmp_v2+4);
 
     std::cout << "v1: ";
     std::for_each(v1.begin(), v1.end(), print_int);

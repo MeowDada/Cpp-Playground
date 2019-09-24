@@ -9,7 +9,10 @@ COPY_RANGE_SRCS    := copy_range.cpp
 SORT_PROG          := sort
 SORT_SRCS          := sort.cpp
 
-all: build_copy_range build_sort
+CHECK_KEY_EXIST_PROG := check_key_exist
+CHECK_KEY_EXIST_SRCS := check_key_exist.cpp
+
+all: build_copy_range build_sort build_check_key_exist
 
 build_copy_range:
 	$(CC) $(CPPFLAGS) -o $(COPY_RANGE_PROG) $(COPY_RANGE_SRCS)
@@ -17,6 +20,9 @@ build_copy_range:
 build_sort:
 	$(CC) $(CPPFLAGS) -o $(SORT_PROG) $(SORT_SRCS)
 
+build_check_key_exist:
+	$(CC) $(CPPFLAGS) -o $(CHECK_KEY_EXIST_PROG) $(CHECK_KEY_EXIST_SRCS)
+
 clean:
 	rm -rf *.o
-	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG)
+	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG) $(CHECK_KEY_EXIST_PROG)

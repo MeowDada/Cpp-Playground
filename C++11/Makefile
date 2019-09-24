@@ -12,7 +12,10 @@ SORT_SRCS          := sort.cpp
 CHECK_KEY_EXIST_PROG := check_key_exist
 CHECK_KEY_EXIST_SRCS := check_key_exist.cpp
 
-all: build_copy_range build_sort build_check_key_exist
+REMOVE_ELEMENT_FROM_CONTAINER_PROG := remove_element_from_container
+REMOVE_ELEMENT_FROM_CONTAINER_SRCS := remove_element_from_container.cpp
+
+all: build_copy_range build_sort build_check_key_exist build_remove_element_from_container
 
 build_copy_range:
 	$(CC) $(CPPFLAGS) -o $(COPY_RANGE_PROG) $(COPY_RANGE_SRCS)
@@ -23,6 +26,9 @@ build_sort:
 build_check_key_exist:
 	$(CC) $(CPPFLAGS) -o $(CHECK_KEY_EXIST_PROG) $(CHECK_KEY_EXIST_SRCS)
 
+build_remove_element_from_container:
+	$(CC) $(CPPFLAGS) -o $(REMOVE_ELEMENT_FROM_CONTAINER_PROG) $(REMOVE_ELEMENT_FROM_CONTAINER_SRCS)
+
 clean:
 	rm -rf *.o
-	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG) $(CHECK_KEY_EXIST_PROG)
+	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG) $(CHECK_KEY_EXIST_PROG) $(REMOVE_ELEMENT_FROM_CONTAINER_PROG)

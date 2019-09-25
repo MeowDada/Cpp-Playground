@@ -37,8 +37,5 @@ int main()
     std::for_each(vec_1.begin(), vec_1.end(), print);
     std::cout << std::endl;
 
-    int arr[5] = {1, 5, 7, 2, 3};
-    std::cout << (&arr[2] - &arr[0]) << std::endl;
-
     return 0;    
 }

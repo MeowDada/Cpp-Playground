@@ -13,11 +13,13 @@ int main()
     std::cout << "v.erase(std::remove(std::begin(v), std::end(v), 2), std::end(v))\n";
     v.erase(std::remove(std::begin(v), std::end(v), 2), std::end(v));
     std::for_each(std::begin(v), std::end(v), print_int);
+    std::cout << "\n";
 
     std::cout << "v.erase(std::remove_if(std::begin(v), std::end(v), [](int i){ return i % 2 == 0; }), std::end(v))\n";
     v.erase(std::remove_if(std::begin(v), std::end(v),
         [](int i) { return i % 2 == 0; }), std::end(v));
     std::for_each(std::begin(v), std::end(v), print_int);
+    std::cout << "\n";
 
 
     return 0;

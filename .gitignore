@@ -1,5 +1,6 @@
 # ignore VSCode workspace
 *.code-workspace
+*.json
 
 # ignore all executable files
 ./C++98/*.exe

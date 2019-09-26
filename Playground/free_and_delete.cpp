@@ -34,5 +34,15 @@ int main()
     std::cout << "delete bar2;\n";
     free(bar2);
 
+    std::cout << "bar1 = new foo();\n";
+    std::cout << "Can we do free(bar1)?\n";
+    free(bar1);
+
+    std::cout << "bar2 = (foo *)malloc(sizeof(foo));\n";
+    bar2 = (foo *)malloc(sizeof(foo));
+    std::cout << "Can we do delete bar2 ?\n";
+    delete bar2;
+
+
     return 0;
 }

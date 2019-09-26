@@ -24,10 +24,14 @@ class foo
 
 int main()
 {
+    std::cout << "foo *bar1 = new foo();\n";
     foo *bar1 = new foo();
-    foo *bar2 = (foo *)malloc(sizeof(foo));
-
+    std::cout << "delete bar1;\n";
     delete bar1;
+
+    std::cout << "foo *bar2 = (foo *)malloc(sizeof(foo));\n";
+    foo *bar2 = (foo *)malloc(sizeof(foo));
+    std::cout << "delete bar2;\n";
     free(bar2);
 
     return 0;

@@ -19,7 +19,7 @@ class foo
 
     private:
         int *p;    
-}
+};
 
 void test()
 {

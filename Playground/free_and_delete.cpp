@@ -25,7 +25,7 @@ class foo
 int main()
 {
     foo *bar1 = new foo();
-    foo *bar2 = malloc(sizeof(foo));
+    foo *bar2 = (foo *)malloc(sizeof(foo));
 
     delete bar1;
     free(bar2);

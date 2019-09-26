@@ -40,7 +40,7 @@ int main()
     char q = 0;
 
     std::cout << "use RAII type correctly\n"; 
-    std::cout << "foo bar;\n"
+    std::cout << "foo bar;\n";
     test();
     std::cout << "deallocate memory internally successfully";
 

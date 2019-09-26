@@ -45,7 +45,7 @@ int main()
     std::cout << "deallocate memory internally successfully";
 
     std::cout << "use RAII type incorrectly\n";
-    std::cout << "foo *bar = new foo();\n"
+    std::cout << "foo *bar = new foo();\n";
     foo *bar = new foo();
     bar->show_addr();
     std::cout << "the memory will not be deallocated until the deconstructor is being invoked\n";

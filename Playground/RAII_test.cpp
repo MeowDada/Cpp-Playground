@@ -1,7 +1,7 @@
 #include <utility>
 #include <iostream>
 
-#define DEFAULT_NUM_ELEMENTS 67108864
+#define DEFAULT_NUM_ELEMENTS 134217728
 
 class foo
 {
@@ -9,12 +9,20 @@ class foo
         foo()
             : p(new int[DEFAULT_NUM_ELEMENTS])
         {
-
+            std::cout << "foo constructor\n";
         }
 
         ~foo()
         {
+            std::cout << "foo deconstructor\n";
             delete[] p;
+        }
+
+        void show_addr()
+        {
+            for(int i = 0 ; i < DEFAULT_NUM_ELEMENTS; i++)
+                p[i] = i;
+            std::cout << p << std::endl;
         }
 
     private:
@@ -23,21 +31,30 @@ class foo
 
 void test()
 {
-    foo *bar = new foo;
-    (foo *)bar;
+    foo bar;
+    bar.show_addr();
 }
 
 int main()
 {
     char q = 0;
 
+    std::cout << "use RAII type correctly\n"; 
+    std::cout << "foo bar;\n"
     test();
+    std::cout << "deallocate memory internally successfully";
 
-    foo *bar = new foo;
-    (foo *)bar;
+    std::cout << "use RAII type incorrectly\n";
+    std::cout << ""
+    foo *bar = new foo();
+    bar->show_addr();
+    std::cout << "the memory will not be deallocated until the deconstructor is being invoked\n";
 
+    std::cout << "enter \'q\' to exit the program\n";
     while (q != 'q')
     {
         std::cin >> q;
     }
+
+    return 0;
 }

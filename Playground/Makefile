@@ -15,7 +15,7 @@ build_free_and_delete:
 	$(CC) $(CPPFLAGS) -o $(FREE_AND_DELETE_PROG) $(FREE_AND_DELETE_SRCS)
 
 build_raii_test:
-	$(CC) $(CPPFLAGS) -o $(RAII_TEST_PROG) $(RAII_TEST_SRCS)
+	$(CC) $(CPPFLAGS) -O0 -o $(RAII_TEST_PROG) $(RAII_TEST_SRCS)
 
 clean:
 	rm -rf *.o

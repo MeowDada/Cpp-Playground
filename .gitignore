@@ -6,6 +6,7 @@
 ./C++98/*.exe
 ./C++11/*.exe
 ./C++14/*.exe
+./Playground/*.exe
 
 # ignore all object files
 ./C++98/*.o

@@ -24,6 +24,7 @@ class foo
 void test()
 {
     foo *bar = new foo;
+    (foo *)bar;
 }
 
 int main()
@@ -31,6 +32,9 @@ int main()
     char q = 0;
 
     test();
+
+    foo *bar = new foo;
+    (foo *)bar;
 
     while (q != 'q')
     {

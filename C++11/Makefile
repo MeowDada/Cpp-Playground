@@ -18,7 +18,11 @@ REMOVE_ELEMENT_FROM_CONTAINER_SRCS := remove_element_from_container.cpp
 SHARED_OWNERSHIP_PROG := shared_ownership
 SHARED_OWNERSHIP_SRCS := shared_ownership.cpp
 
-all: build_copy_range build_sort build_check_key_exist build_remove_element_from_container build_shared_ownership
+SFINAE_TEMPLATE_PROG := SFINAE_template
+SFINAE_TEMPLATE_SRCS := SFINAE_template.cpp
+
+all: build_copy_range build_sort build_check_key_exist build_remove_element_from_container build_shared_ownership \
+     build_sfinae_template
 
 build_copy_range:
 	$(CC) $(CPPFLAGS) -o $(COPY_RANGE_PROG) $(COPY_RANGE_SRCS)
@@ -35,6 +39,9 @@ build_remove_element_from_container:
 build_shared_ownership:
 	$(CC) $(CPPFLAGS) -o $(SHARED_OWNERSHIP_PROG) $(SHARED_OWNERSHIP_SRCS)
 
+build_sfinae_template:
+	$(CC) $(CPPFLAGS) -o $(SFINAE_TEMPLATE_PROG) $(SFINAE_TEMPLATE_SRCS)
+
 clean:
 	rm -rf *.o
-	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG) $(CHECK_KEY_EXIST_PROG) $(REMOVE_ELEMENT_FROM_CONTAINER_PROG) $(SHARED_OWNERSHIP_PROG)
+	rm -rf $(COPY_RANGE_PROG) $(SORT_PROG) $(CHECK_KEY_EXIST_PROG) $(REMOVE_ELEMENT_FROM_CONTAINER_PROG) $(SHARED_OWNERSHIP_PROG) $(SFINAE_TEMPLATE_PROG)
